@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<title>DV Visual Lab — Portfolio</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&amp;family=Manrope:wght@400;500;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0D0D0F;color:#EDEBE6;font-family:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif}
+a{color:#D4C09E}a:hover{color:#E8DCC4}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start}
+.wide{grid-column:span 2}
+.full{grid-column:1 / -1}
+.card{background:#151518;border:1px solid #26262B;border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:14px}
+.vid{position:relative;border-radius:12px;background:#1C1C21;border:1px dashed #44444C;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:#A9A7A0}
+.v916{aspect-ratio:9/16}
+.v169{aspect-ratio:16/9}
+.mono{font-family:'JetBrains Mono',ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.tag{align-self:flex-start;padding:6px 10px;border-radius:999px;border:1px solid #6B6A64;color:#D9D6CE}
+.tagc{border-color:#D4C09E;color:#D4C09E}
+.lbl{color:#9C9A93;margin:0 0 4px}
+.ttl{font-family:'Unbounded','Manrope',sans-serif;font-weight:700;font-size:20px;line-height:1.25;margin:0}
+.txt{margin:0;font-size:15px;line-height:1.55;color:#CFCCC4}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:6px 10px;border-radius:8px;background:#222228;font-size:13px;color:#EDEBE6}
+.sec{padding:96px 0;border-top:1px solid #1F1F24}
+.h2{font-family:'Unbounded','Manrope',sans-serif;font-weight:700;font-size:40px;line-height:1.1;margin:0}
+.steps{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.step{background:#151518;border:1px solid #26262B;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.price{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.pcard{background:#151518;border:1px solid #26262B;border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:700;text-decoration:none;font-size:15px}
+.tabs{display:flex;flex-wrap:wrap;gap:10px}
+.tab{min-height:44px;padding:0 18px;border-radius:999px;font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;cursor:pointer}
+@media (max-width:1000px){.vids4{grid-template-columns:repeat(2,minmax(0,1fr)) !important}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.price{grid-template-columns:1fr}}
+@media (max-width:900px){.ugcv{grid-template-columns:1fr !important}.grid{grid-template-columns:1fr}.wide{grid-column:auto}.full{grid-column:auto}.h2{font-size:30px}.hero-h{font-size:44px !important}}
+</style>
+</helmet>
+
+<div style="min-height: 100vh; background: #0D0D0F">
+
+  <header style="border-bottom: 1px solid #1F1F24">
+    <div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-top: 20px; padding-bottom: 20px">
+      <a href="#top" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #EDEBE6">
+        <img src="./assets/2c40151b6cb8e69e04b78c5f1c0c4027.png" alt="DV Visual Lab logo" style="height: 40px; width: auto; display: block">
+        <span style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 16px">DV Visual Lab</span>
+      </a>
+      <nav style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px">
+        <a href="#radovi" style="color: #EDEBE6; text-decoration: none">Radovi</a>
+        <a href="#proces" style="color: #EDEBE6; text-decoration: none">Proces</a>
+        <a href="#kontakt" style="color: #EDEBE6; text-decoration: none">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="top" class="wrap" style="padding-top: 96px; padding-bottom: 72px; display: flex; flex-direction: column; gap: 28px">
+    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 48px">
+    <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+    <p class="mono" style="margin: 0; color: {{accent}}">AI content studio · Instagram · TikTok · oglasi</p>
+    <h1 class="hero-h" style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 72px; line-height: 1.02; max-width: 1000px">Vaše fotografije.<br>Filmski video.</h1>
+    <p style="margin: 0; font-size: 20px; line-height: 1.55; color: #CFCCC4; max-width: 760px">Pomažem malim brendovima i lokalnim biznisima da redovno objavljuju video reklame za Instagram i TikTok — kroz AI filmske kadrove, UGC scenarije i AI avatare, napravljene iz fotografija koje već imate.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 12px">
+      <a class="btn" href="https://www.instagram.com/dv.visual.lab/" target="_blank" rel="noopener" style="background: {{accent}}; color: #0D0D0F">Pišite na Instagramu</a>
+      <a class="btn" href="#radovi" style="border: 1px solid #44444C; color: #EDEBE6">Pogledajte radove</a>
+    </div>
+    </div>
+    <img src="./assets/16546f19a38c91d3924667722c6ac89a.png" alt="DV Visual Lab — AI Content &amp; Creative Studio" style="flex: 1 1 280px; width: 100%; max-width: 380px; height: auto; display: block">
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 24px">
+      <div style="border-top: 1px solid #33333A; padding-top: 16px; display: flex; flex-direction: column; gap: 6px">
+        <span class="mono" style="color: {{accent}}">01</span>
+        <span style="font-size: 16px; line-height: 1.5">Bez snimanja na terenu — radim iz vaših fotografija.</span>
+      </div>
+      <div style="border-top: 1px solid #33333A; padding-top: 16px; display: flex; flex-direction: column; gap: 6px">
+        <span class="mono" style="color: {{accent}}">02</span>
+        <span style="font-size: 16px; line-height: 1.5">Formati za Reels, TikTok i oglase: 9:16 i 16:9.</span>
+      </div>
+      <div style="border-top: 1px solid #33333A; padding-top: 16px; display: flex; flex-direction: column; gap: 6px">
+        <span class="mono" style="color: {{accent}}">03</span>
+        <span style="font-size: 16px; line-height: 1.5">Jedan krug izmena uključen u svaki paket.</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="radovi" class="sec">
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 32px">
+      <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px">
+        <div style="display: flex; flex-direction: column; gap: 12px; max-width: 640px">
+          <p class="mono" style="margin: 0; color: #9C9A93">Izabrani radovi</p>
+          <h2 class="h2">Video za svaku nišu</h2>
+          <p class="txt">Svaki projekat prikazuje problem, rešenje i šta je klijent tačno dobio. Radovi označeni kao demo su probni projekti, ne plaćene kampanje.</p>
+        </div>
+        <div class="tabs" aria-label="Filtriraj radove">
+          <sc-for list="{{tabs}}" as="tab" hint-placeholder-count="7">
+            <button class="tab" type="button" aria-pressed="{{tab.pressed}}" onClick="{{tab.pick}}" style="background: {{tab.bg}}; color: {{tab.fg}}; border: 1px solid {{tab.bd}}">{{tab.label}}</button>
+          </sc-for>
+        </div>
+      </div>
+
+      <div class="grid">
+
+        <sc-if value="{{show.film}}" hint-placeholder-val="{{ true }}">
+        <article class="card wide">
+          <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; align-items: start">
+            <video src="./assets/e5d4d4c59e25bfac77fc75a9f486a18c.mp4" controls="controls" playsinline="playsinline" preload="metadata" aria-label="Filmski kadar: ulica, 9:16" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 12px; background: #000; display: block"></video>
+            <div style="display: flex; flex-direction: column; gap: 12px">
+              <video src="./assets/91e4f25859786d06b0eaf1dd0007a4dc.mp4" controls="controls" playsinline="playsinline" preload="metadata" aria-label="Filmski kadar: noćna scena, 16:9" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; background: #000; display: block"></video>
+              <video src="./assets/281784a1922170834c33de94341c2cdf.mp4" controls="controls" playsinline="playsinline" preload="metadata" aria-label="Filmski kadar: helikopter, 16:9" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; background: #000; display: block"></video>
+              <video src="./assets/7f62815f8e117f8b50f23f887d8fa43f.mp4" controls="controls" playsinline="playsinline" preload="metadata" aria-label="Filmski kadar: noćna scena 2, 16:9" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; background: #000; display: block"></video>
+            </div>
+          </div>
+          <span class="tag mono">Demo projekat — nije plaćena kampanja</span>
+          <div>
+            <p class="mono lbl">Filmski kadrovi · 9:16 i 16:9 · 10–12 s</p>
+            <h3 class="ttl">AI kratki filmovi — kadrovi kao iz bioskopa</h3>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
+            <div><p class="mono lbl">Problem</p><p class="txt">Obična fotografija proizvoda ne zaustavlja skrolovanje. Brendu treba kadar koji izgleda kao isečak iz filma.</p></div>
+            <div><p class="mono lbl">Rešenje</p><p class="txt">Kratke filmske scene sa doslednim likovima, svetlom i kretanjem kamere — proizvod ili brend postaje deo priče.</p></div>
+          </div>
+          <div><p class="mono lbl">Isporuka</p><div class="chips"><span class="chip">4 videa</span><span class="chip">Formati 9:16 i 16:9</span><span class="chip">Muzika i zvučni efekti</span></div></div>
+          <p class="txt"><strong style="color: #EDEBE6">Rezultat:</strong> filmski video spreman za Reels, TikTok, YouTube i sajt.</p>
+        </article>
+        </sc-if>
+
+        <sc-if value="{{show.nekretnine}}" hint-placeholder-val="{{ true }}">
+        <article class="card">
+          <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+            <video src="./assets/f2b477fc9d668681d21e2c4c33e9843f.mp4" controls="controls" playsinline="playsinline" preload="metadata" aria-label="Nekretnine: od praznog prostora do opremljenog stana" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 12px; background: #000; display: block"></video>
+            <video src="./assets/da9ad5c4066ee8ae4e82779cf6fe7bf5.mp4" controls="controls" playsinline="playsinline" preload="metadata" aria-label="Nekretnine: video prezentacija kuće iz fotografija" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 12px; background: #000; display: block"></video>
+          </div>
+          <span class="tag mono">Demo projekat — nije plaćena kampanja</span>
+          <div>
+            <p class="mono lbl">Nekretnine i agencije · 9:16 · 10–16 s</p>
+            <h3 class="ttl">Od praznog prostora do prostora koji prodaje</h3>
+          </div>
+          <div><p class="mono lbl">Problem</p><p class="txt">Prazan stan na fotografiji ne budi emociju, a agencija ima samo nekoliko slika nekretnine.</p></div>
+          <div><p class="mono lbl">Rešenje</p><p class="txt">AI virtuelno opremanje prostora i video prezentacija napravljena samo iz dobijenih fotografija.</p></div>
+          <div><p class="mono lbl">Isporuka</p><div class="chips"><span class="chip">2 videa 9:16</span><span class="chip">Pre / posle</span><span class="chip">Muzika ili naracija</span></div></div>
+          <p class="txt"><strong style="color: #EDEBE6">Rezultat:</strong> oglas koji kupcu pokazuje kako bi mogao da živi u prostoru — za agencije, investitore i vlasnike.</p>
+        </article>
+        </sc-if>
+
+        <sc-if value="{{show.proizvodi}}" hint-placeholder-val="{{ true }}">
+        <article class="card full">
+          <div class="vids4" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px">
+            <video src="./assets/976b1afa17574808a5ba1459b4d234e4.mp4" controls="controls" playsinline="playsinline" preload="metadata" aria-label="Proizvod u trend videu: krupni kadar" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 12px; background: #000; display: block"></video>
+            <video src="./assets/6294f4ecb8218fecef747abf6bc4e951.mp4" controls="controls" playsinline="playsinline" preload="metadata" aria-label="Trend razbijeno staklo: kesa butika na sedištu" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 12px; background: #000; display: block"></video>
+            <video src="./assets/d5fb8fcf98bba8a964a0bf1bad683268.mp4" controls="controls" playsinline="playsinline" preload="metadata" aria-label="Realistični selfie video: naočare za sunce" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 12px; background: #000; display: block"></video>
+            <video src="./assets/6a43746a4b8cec126c6d071469076612.mp4" controls="controls" playsinline="playsinline" preload="metadata" aria-label="Realistični video na ulici: kačket" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 12px; background: #000; display: block"></video>
+          </div>
+          <span class="tag mono">Demo projekat — nije plaćena kampanja</span>
+          <div>
+            <p class="mono lbl">Proizvodi · realistični i trend video · 9:16 · 8–15 s</p>
+            <h3 class="ttl">Jedan proizvod, viralni trend — realistične AI reklame</h3>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
+            <div><p class="mono lbl">Problem</p><p class="txt">Proizvod ima samo obične fotografije, a profesionalno snimanje sa modelima i lokacijom je skupo i sporo.</p></div>
+            <div><p class="mono lbl">Rešenje</p><p class="txt">Od jedne fotografije proizvoda pravim realističan video: proizvod ili logo postaje deo trenutnog trenda, scene sa ulice ili selfie snimka koji izgleda kao pravi.</p></div>
+          </div>
+          <div><p class="mono lbl">Isporuka</p><div class="chips"><span class="chip">4 videa 9:16</span><span class="chip">Trend koncepti</span><span class="chip">Muzika i CTA</span></div></div>
+          <p class="txt"><strong style="color: #EDEBE6">Rezultat:</strong> reklama koja se ne vidi kao reklama — spremna za Reels i TikTok, bez skupog snimanja.</p>
+        </article>
+        </sc-if>
+
+        <sc-if value="{{show.moda}}" hint-placeholder-val="{{ true }}">
+        <article class="card full">
+          <div class="vids4" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px">
+            <video src="./assets/d84d02195a15a7ac2e0638f226e094b5.mp4" controls="controls" playsinline="playsinline" preload="metadata" aria-label="TIVA Collection: komplet sa detaljima" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 12px; background: #000; display: block"></video>
+            <video src="./assets/c907417519672d0663ed1f4ba76a198d.mp4" controls="controls" playsinline="playsinline" preload="metadata" aria-label="TIVA Collection: dve haljine, dva stila" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 12px; background: #000; display: block"></video>
+            <video src="./assets/700b5167709b9ff65e06204a4669aa11.mp4" controls="controls" playsinline="playsinline" preload="metadata" aria-label="TIVA Collection: bunda od imitacije nerca" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 12px; background: #000; display: block"></video>
+            <video src="./assets/237556baf5e425353595287e6de41c78.mp4" controls="controls" playsinline="playsinline" preload="metadata" aria-label="TIVA Collection: svilena haljina" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 12px; background: #000; display: block"></video>
+          </div>
+          <span class="tag tagc mono">Klijentski projekat · TIVA Collection</span>
+          <div>
+            <p class="mono lbl">Butici i online prodaja · 9:16 · 10–20 s</p>
+            <h3 class="ttl">Video za online prodaju garderobe — svaki komad u pokretu</h3>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
+            <div><p class="mono lbl">Problem</p><p class="txt">Kupac na Instagramu ne može da dodirne materijal ni da proba komad. Statična fotografija ne pokazuje kako haljina pada i kako izgleda na telu.</p></div>
+            <div><p class="mono lbl">Rešenje</p><p class="txt">Kratki video za svaki artikal: model u enterijeru butika pokazuje kroj, materijal i detalje — svila, krzno, kapuljača, pojas — uz poruku koja prodaje.</p></div>
+          </div>
+          <div><p class="mono lbl">Isporuka</p><div class="chips"><span class="chip">4 videa 9:16</span><span class="chip">Jedan video po artiklu</span><span class="chip">Tekst za objavu</span></div></div>
+          <p class="txt"><strong style="color: #EDEBE6">Rezultat:</strong> nova kolekcija predstavljena u pokretu, spremna za Reels, oglase i online prodaju — bez foto-sesije.</p>
+        </article>
+        </sc-if>
+
+        <sc-if value="{{show.ugc}}" hint-placeholder-val="{{ true }}">
+        <article class="card wide">
+          <div class="ugcv" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
+            <video src="./assets/d2447cda9aca4259af4b21eb006da071.mp4" controls="controls" playsinline="playsinline" preload="metadata" aria-label="UGC: knjiga i podkast studio" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 12px; background: #000; display: block"></video>
+            <video src="./assets/e288b2ceb56017f3c39647f39a68476d.mp4" controls="controls" playsinline="playsinline" preload="metadata" aria-label="UGC: ugostiteljstvo, šank" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 12px; background: #000; display: block"></video>
+            <video src="./assets/fa28d2cc991c192a8ac363f3b5948013.mp4" controls="controls" playsinline="playsinline" preload="metadata" aria-label="UGC: beauty proizvod" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 12px; background: #000; display: block"></video>
+          </div>
+          <span class="tag mono">Demo projekat — nije plaćena kampanja</span>
+          <div>
+            <p class="mono lbl">UGC video · 9:16 · 10–20 s</p>
+            <h3 class="ttl">AI UGC reklame — lik koji priča u kameru</h3>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
+            <div><p class="mono lbl">Problem</p><p class="txt">Brend nema vremena ni budžet za kamermana i modele, a reklame bez lica deluju hladno i „reklamno”.</p></div>
+            <div><p class="mono lbl">Rešenje</p><p class="txt">AI lik priča u kameru kao pravi korisnik — u studiju, za šankom ili u kupatilu sa proizvodom u ruci — sa jasnim hookom i CTA-om.</p></div>
+          </div>
+          <div><p class="mono lbl">Isporuka</p><div class="chips"><span class="chip">3 videa</span><span class="chip">Različite niše</span><span class="chip">Govor i titlovi</span></div></div>
+          <p class="txt"><strong style="color: #EDEBE6">Rezultat:</strong> sadržaj sa ljudskim licem, spreman za TikTok, Reels i oglase.</p>
+        </article>
+        </sc-if>
+
+        <sc-if value="{{show.cta}}" hint-placeholder-val="{{ true }}">
+        <aside class="card" style="background: {{accent}}; border-color: {{accent}}; color: #0D0D0F; padding: 28px; gap: 18px">
+          <p class="mono" style="margin: 0; color: #3A3020">Sledeći projekat</p>
+          <h3 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 28px; line-height: 1.15">Vaš proizvod je sledeći.</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.55">Pošaljite 3–5 fotografija i jednu rečenicu o tome šta prodajete. Odgovaram sa idejom za video.</p>
+          <a class="btn" href="https://www.instagram.com/dv.visual.lab/" target="_blank" rel="noopener" style="background: #0D0D0F; color: #EDEBE6; align-self: flex-start">Pišite na Instagramu</a>
+        </aside>
+        </sc-if>
+
+        <sc-if value="{{show.metal}}" hint-placeholder-val="{{ true }}">
+        <article class="card wide">
+          <video src="./assets/55d9877b5a7791e6321beda43d50c722.mp4" controls="controls" playsinline="playsinline" preload="metadata" aria-label="Podovi: izlivanje dekorativnog poda, 16:9" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; background: #000; display: block"></video>
+          <div class="ugcv" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
+            <video src="./assets/49b0946f2b3fde95bedb13c692c6b7b5.mp4" controls="controls" playsinline="playsinline" preload="metadata" aria-label="MSV Obrada Metala: hala i spiralne stepenice, 9:16" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 12px; background: #000; display: block"></video>
+            <video src="./assets/4dab76a4a3e4b8939d278b73a0a932c5.mp4" controls="controls" playsinline="playsinline" preload="metadata" aria-label="Metal: rezna ploča i varnice, 9:16" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 12px; background: #000; display: block"></video>
+            <video src="./assets/717460cabb0922da31f7b16136ca0b53.mp4" controls="controls" playsinline="playsinline" preload="metadata" aria-label="MSV Obrada Metala: spiralno stepenište, 9:16" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 12px; background: #000; display: block"></video>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px">
+            <span class="tag tagc mono">Klijentski projekat · MSV Obrada Metala</span>
+            <span class="tag mono">Demo projekat · podovi</span>
+          </div>
+          <div>
+            <p class="mono lbl">Uslužni poslovi i zanati · metal · podovi · 9:16 i 16:9</p>
+            <h3 class="ttl">Zanat u filmskom kadru — metal, podovi, majstori</h3>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
+            <div><p class="mono lbl">Problem</p><p class="txt">Izrada je vrhunska, ali fotografije sa gradilišta i iz radionice ne prenose preciznost, trud i kvalitet rada.</p></div>
+            <div><p class="mono lbl">Rešenje</p><p class="txt">Cinematic kadrovi zanata: varnice sa rezne ploče, odsjaj na inoxu, spiralno stepenište, majstori koji izlivaju dekorativni pod.</p></div>
+          </div>
+          <div><p class="mono lbl">Isporuka</p><div class="chips"><span class="chip">4 videa</span><span class="chip">Formati 9:16 i 16:9</span><span class="chip">Muzika i CTA kadar</span></div></div>
+          <p class="txt"><strong style="color: #EDEBE6">Rezultat:</strong> sadržaj koji prodaje zanat — za Instagram, Facebook i sajt, za metalce, podopolagače, molere i druge uslužne delatnosti.</p>
+        </article>
+        </sc-if>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="proces" class="sec">
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 40px">
+      <div style="display: flex; flex-direction: column; gap: 12px; max-width: 640px">
+        <p class="mono" style="margin: 0; color: #9C9A93">Kako radim</p>
+        <h2 class="h2">Od fotografije do gotovog videa</h2>
+      </div>
+      <ol class="steps" style="list-style: none; margin: 0; padding: 0">
+        <li class="step"><span class="mono" style="color: {{accent}}">01</span><strong style="font-size: 17px">Brief</strong><span class="txt" style="font-size: 14px">Šta prodajete, kome i gde će video ići.</span></li>
+        <li class="step"><span class="mono" style="color: {{accent}}">02</span><strong style="font-size: 17px">Skripta</strong><span class="txt" style="font-size: 14px">Hook, priča i CTA — pre nego što išta generišem.</span></li>
+        <li class="step"><span class="mono" style="color: {{accent}}">03</span><strong style="font-size: 17px">Vizual</strong><span class="txt" style="font-size: 14px">Vaše fotografije postaju referenca za proizvod i lik.</span></li>
+        <li class="step"><span class="mono" style="color: {{accent}}">04</span><strong style="font-size: 17px">Generisanje</strong><span class="txt" style="font-size: 14px">Kadrovi u AI video modelima, kadar po kadar.</span></li>
+        <li class="step"><span class="mono" style="color: {{accent}}">05</span><strong style="font-size: 17px">Montaža</strong><span class="txt" style="font-size: 14px">Ritam, titlovi, glas, muzika i zvučni efekti.</span></li>
+        <li class="step"><span class="mono" style="color: {{accent}}">06</span><strong style="font-size: 17px">Finalni fajlovi</strong><span class="txt" style="font-size: 14px">Video u formatu za vašu mrežu, plus krug izmena.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="kontakt" class="sec">
+    <div class="wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px">
+      <div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
+        <p class="mono" style="margin: 0; color: #9C9A93">Kontakt</p>
+        <h2 class="h2">Imate proizvod i par fotografija? To je dovoljno za početak.</h2>
+        <p class="txt">Pišite mi u DM na Instagramu — pošaljite fotografije i par reči o tome šta prodajete. Prvi razgovor je besplatan.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px; min-width: 260px">
+        <a class="btn" href="https://www.instagram.com/dv.visual.lab/" target="_blank" rel="noopener" style="background: {{accent}}; color: #0D0D0F; min-height: 56px; font-size: 16px">Pišite na Instagramu · @dv.visual.lab</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid #1F1F24">
+    <div class="wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-top: 28px; padding-bottom: 40px; font-size: 13px; color: #9C9A93">
+      <span style="display: flex; align-items: center; gap: 12px"><img src="./assets/2c40151b6cb8e69e04b78c5f1c0c4027.png" alt="" style="height: 24px; width: auto; display: block">© 2026 DV Visual Lab · AI Content &amp; Creative Studio</span>
+      <span>Radovi označeni „Demo projekat” su probni radovi, ne plaćene kampanje.</span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#D4C09E","options":["#D4C09E","#C6F24E","#7CC4FF","#F2F0EA"]},"$preview":{"width":1440,"height":5400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var accent = this.props.accent ?? '#D4C09E';
+    var f = (this.state && this.state.filter) || 'sve';
+    var self = this;
+    var defs = [
+      ['sve', 'Sve'], ['film', 'Filmski kadrovi'], ['proizvodi', 'Proizvodi'], ['ugc', 'UGC'],
+      ['metal', 'Usluge i zanati'], ['moda', 'Butici i online prodaja'], ['nekretnine', 'Nekretnine i agencije']
+    ];
+    var tabs = defs.map(function (d) {
+      var on = d[0] === f;
+      return {
+        label: d[1],
+        pressed: on ? 'true' : 'false',
+        bg: on ? accent : 'transparent',
+        fg: on ? '#0D0D0F' : '#EDEBE6',
+        bd: on ? accent : '#3A3A40',
+        pick: function () { self.setState({ filter: d[0] }); }
+      };
+    });
+    function s(k) { return f === 'sve' || f === k; }
+    return {
+      accent: accent,
+      tabs: tabs,
+      show: {
+        film: s('film'), proizvodi: s('proizvodi'), ugc: s('ugc'), metal: s('metal'), moda: s('moda'),
+        nekretnine: s('nekretnine'), cta: f === 'sve'
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
